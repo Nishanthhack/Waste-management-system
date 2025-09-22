@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Reporting - Digital Waste Management System</title>
+    <link rel="icon" type="image/png" href="images/Waste Management.svg">
+    <link rel="stylesheet" href="report.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="reporting-container">
+        <div class="report-card">
+            <div class="logo-container">
+                <img src="images/Waste Management.svg" alt="DWMS Logo" class="dwms-report-logo">
+            </div>
+            <h2>Community Reporting</h2>
+            <p class="subtitle">Report waste issues in your community quickly and easily.</p>
+
+            <form id="reportForm" novalidate>
+                <div class="form-group">
+                    <label for="description">Description of Complaint/Issue</label>
+                    <textarea id="description" name="description" rows="5" placeholder="e.g., Illegal dumping at park entrance, missed garbage collection, overflowing bins."></textarea>
+                    <span class="error-message" id="description-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Upload Photo (optional)</label>
+                    <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png">
+                    <span class="error-message" id="photo-error"></span>
+                    <div id="photo-preview-container" class="photo-preview-container">
+                        <img id="photo-preview" src="#" alt="Photo Preview" class="photo-preview" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="form-group gps-group">
+                    <label>Location</label>
+                    <button type="button" id="getLocationBtn" class="btn-secondary">
+                        <span class="gps-icon">📍</span> Get My Current Location
+                    </button>
+                    <input type="hidden" id="latitude" name="latitude">
+                    <input type="hidden" id="longitude" name="longitude">
+                    <p id="locationStatus" class="location-status"></p>
+                    <span class="error-message" id="location-error"></span>
+                </div>
+                
+                <button type="submit" class="btn submit-btn" id="submitReportBtn">
+                    Submit Report
+                    <span class="loading-spinner" style="display: none;"></span>
+                </button>
+            </form>
+
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>

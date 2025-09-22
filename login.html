@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Digital Waste Management System</title>
+    <link rel="icon" type="image/png" href="images/Waste Management.svg">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo-container">
+                <img src="images/Waste Management.svg" alt="DWMS Logo" class="dwms-login-logo">
+            </div>
+            <h2>Login to your Account</h2>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="username">Username / Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username or email">
+                    <span class="error-message" id="username-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="role">Select Role</label>
+                    <select id="role" name="role">
+                        <option value="citizen">Citizen</option>
+                        <option value="cleaner">Cleaner</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn login-btn">Login</button>
+            </form>
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <span>|</span>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

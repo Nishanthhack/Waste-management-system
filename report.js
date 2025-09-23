@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const locationError = document.getElementById('location-error');
 
     // Google Apps Script Web App URL
-    const webAppUrl = "https://script.google.com/macros/s/AKfycbwGFen6eISnuX6e3O-0SadDM7Jact6EMAKC5r_IrPUkC4caD2Kq8Y_iPX8QIfrZrOiBFA/exec";
+    const webAppUrl = "shttps://script.google.com/macros/s/AKfycbyZ0nMeiZlt7Hvs1ZbtgSrkuSujFMk9vR3hmCLl-16fm585YJCSeZpAxpWWf1Q0vpeY/exec";
 
     let currentLatitude = null;
     let currentLongitude = null;
@@ -162,4 +162,5 @@ document.addEventListener('DOMContentLoaded', () => {
             statusMessageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     });
+
 });
